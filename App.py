@@ -121,8 +121,7 @@ def fetchArticleDetails(pmid: str):
 
 # Querying PubMed
 def searchPubMed(query: str, maxResults: int, year: str = None):
-    if year and year != "All Years":
-        query = f"{query} AND {year}"
+    query = f"{query} AND {year}"
     handle = Entrez.esearch(db="pubmed", term=query, retmax=maxResults, sort="relevance")
     record = Entrez.read(handle)
     handle.close()
