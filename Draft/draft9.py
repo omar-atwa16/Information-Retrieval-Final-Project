@@ -377,7 +377,7 @@ with tab4:
         st.success(f"Inverted index loaded! Total tokens: {len(inverted_index)}")
         
         # input token to search
-        search_token = st.text_input("Enter a keyword to search articles:", placeholder="e.g., breast cancer")
+        search_token = st.text_input("Enter a keyword to search articles:", placeholder="e.g., cancer")
         
         if st.button("Search"):
             if not search_token:
